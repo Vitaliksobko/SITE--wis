@@ -1,0 +1,478 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Intro */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/site.jfif") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro__title {
+    color: #fff;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    margin: 60px auto;
+    background-color: #fff;
+}
+
+.intro__suptitle {
+    margin-bottom: 20px;
+    font-family: 'Courgette', cursive;
+    font-size: 54px;
+    color: #fff;
+}
+
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+/* Nav */
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #361330;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    color: #361330;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link.active {
+    color: #361330;
+}
+
+
+/* Button */
+
+
+/*sprite*/
+
+.icons2 {
+    position: flex;
+}
+
+.icons {
+    position: flex 0px left 0px;
+}
+
+.icons a img {
+    opacity: 0.70;
+    transition: 0.72s;
+    position: flex;
+}
+
+.icons a:hover img {
+    opacity: 2;
+    transition: 0.32;
+    transform: scale(1.08);
+}
+
+
+/*sprite*/
+
+
+/*СЕЛЕКЦІЯ*/
+
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    margin: 30px auto;
+    background-color: #35053b;
+}
+
+.section__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(22, 22, 22);
+}
+
+
+/*about_img*/
+
+.about {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    width: 380px;
+    position: relative;
+    background-color: #0c0c0c;
+}
+
+.about__item:hover .about__img {
+    transform: translate3d(-15px, -15px, 0);
+}
+
+.about__item:hover .about__img img {
+    opacity: .1;
+}
+
+.about__item:hover .about__text {
+    opacity: 1;
+}
+
+.about__img {
+    background: linear-gradient(to bottom, #7e4a73, #7491ac);
+    transition: transform .2s linear;
+}
+
+.about__img img {
+    display: block;
+    transition: opacity .1s linear;
+}
+
+.about__text {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity .2s linear;
+}
+
+
+/* Statistics */
+
+.gradient {
+    background: linear-gradient(to top, #67517c, #709099);
+    padding: 10px;
+}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 1 1 0;
+    padding: 70px 25px;
+    border-left: 1px solid #ffffff1e;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #ffffff1e;
+}
+
+.stat__count {
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+/* statistic */
+
+
+/*service*/
+
+
+/* Services */
+
+.services {
+    display: flex;
+}
+
+.services__item {
+    flex: 1 1 0;
+    padding-left: 85px;
+    padding-right: 35px;
+    position: relative;
+}
+
+.services__icon {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    z-index: 1;
+}
+
+.services__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.services__text {
+    font-size: 15px;
+    color: #999;
+}
+
+
+/*service*/
+
+
+/*КНОПОЧКА*/
+
+
+/*КНОПОЧКА*/
+
+
+/*КНОПОЧКА*/
+
+
+/*КНОПОЧКА*/
+
+
+/*КНОПОЧКА*/
+
+
+/*КНОПОЧКА*/
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave-btn {
+    width: 280px;
+    height: 60px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+}
+
+.wave-btn:hover {
+    border-radius: 10px;
+    transition: all 0.8s ease 0.2s;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.wave-btn:hover .wave-btn__waves {
+    top: -50px;
+}
+
+.wave-btn__text {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.wave-btn__waves {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background-color: #b88dc5;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 50px rgba(116, 64, 104, 0.5);
+    box-shadow: inset 0 0 50px rgba(95, 127, 146, 0.5);
+    transition: all 0.8s ease 0s;
+}
+
+.wave-btn__waves:after,
+.wave-btn__waves:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 250%;
+    height: 250%;
+    transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+}
+
+.wave-btn__waves:before {
+    background-color: rgb(211, 198, 209);
+    border-radius: 48%;
+    animation: waves 5s infinite linear;
+}
+
+.wave-btn__waves:after {
+    background-color: rgba(124, 30, 119, 0.5);
+    border-radius: 44%;
+    animation: waves 10s infinite linear;
+}
+
+@keyframes waves {
+    0% {
+        transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+    }
+    100% {
+        transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+    }
+}
+
+
+/*КНОПОСКА*/
+
+
+/*КНОПОСКА*/
+
+
+/*КНОПОСКА*/
+
+
+/*КНОПОСКА*/
+
+
+/*КНОПОСКА*/
+
+
+/*КНОПОСКА*/
